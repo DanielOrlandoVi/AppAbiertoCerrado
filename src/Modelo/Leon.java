@@ -1,0 +1,24 @@
+
+package Modelo;
+
+import Modelo.Felino;
+import Modelo.Animal;
+
+
+public class Leon extends Animal implements Felino{
+    
+    public Leon(String nombre, int id, String clasificacion){
+        super(nombre, id, clasificacion);
+    }   
+    
+    
+    @Override 
+    public void alimentarse(){
+        System.out.println("El león se alimenta de carne");
+    }
+    
+    @Override
+    public void ronronear(){
+        System.out.println("Un león ronronea");
+    }
+}
