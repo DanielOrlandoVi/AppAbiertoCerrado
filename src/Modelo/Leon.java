@@ -14,11 +14,11 @@ public class Leon extends Animal implements Felino{
     
     @Override 
     public void alimentarse(){
-        System.out.println("El león se alimenta de carne");
+        System.out.println("El leon se alimenta de carne");
     }
     
     @Override
     public void ronronear(){
-        System.out.println("Un león ronronea");
+        System.out.println("Un leon ronronea");
     }
 }
