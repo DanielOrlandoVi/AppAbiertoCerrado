@@ -13,6 +13,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.SwingConstants;
 
 public class MainFrame extends JFrame {
 
@@ -38,13 +39,23 @@ public class MainFrame extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblBienvenido = new JLabel("Bienvenido al sistema de inventario de animales del zoológico:");
-        lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        lblBienvenido.setBounds(10, 11, 414, 14);
+        lblBienvenido.setBounds(20, 54, 414, 14);
+        lblBienvenido.setFont(new Font("Times New Roman", Font.BOLD, 14));
         contentPane.add(lblBienvenido);
 
         JButton btnObtenerDatos = new JButton("Obtener Datos");
-        btnObtenerDatos.setBounds(148, 75, 135, 23);
+        btnObtenerDatos.setVerticalAlignment(SwingConstants.TOP);
+        btnObtenerDatos.setBounds(151, 154, 135, 23);
+        btnObtenerDatos.setFont(new Font("Sylfaen", Font.ITALIC, 14));
         contentPane.add(btnObtenerDatos);
+        
+        JLabel lblNewLabel = new JLabel("Yader Ibraldo Quiroga Torres - 20222020034");
+        lblNewLabel.setBounds(172, 236, 234, 14);
+        contentPane.add(lblNewLabel);
+        
+        JLabel lblDanielOrlandoVillescas = new JLabel("Daniel Orlando Villescas Mora - 20221020065");
+        lblDanielOrlandoVillescas.setBounds(172, 247, 234, 14);
+        contentPane.add(lblDanielOrlandoVillescas);
         
         btnObtenerDatos.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

@@ -17,6 +17,9 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
 public class ObtenerDatos extends JFrame {
 
@@ -37,30 +40,38 @@ public class ObtenerDatos extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblBienvenidoAlSistema = new JLabel("Bienvenido al sistema de inventario de animales del zool\u00F3gico:");
-        lblBienvenidoAlSistema.setBounds(10, 11, 414, 14);
+        lblBienvenidoAlSistema.setFont(new Font("Times New Roman", Font.BOLD, 14));
+        lblBienvenidoAlSistema.setBounds(10, 24, 414, 14);
         contentPane.add(lblBienvenidoAlSistema);
 
         JButton btnAnadirLeon = new JButton("Añadir león");
+        btnAnadirLeon.setVerticalAlignment(SwingConstants.TOP);
+        btnAnadirLeon.setFont(new Font("Sylfaen", Font.ITALIC, 14));
         btnAnadirLeon.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 zoologico.agregarAnimal("León");
                 JOptionPane.showMessageDialog(null, "León añadido correctamente.");
             }
         });
-        btnAnadirLeon.setBounds(10, 36, 144, 23);
+        btnAnadirLeon.setBounds(147, 65, 144, 23);
         contentPane.add(btnAnadirLeon);
 
         JButton btnAnadirOso = new JButton("Añadir oso");
+        btnAnadirOso.setVerticalAlignment(SwingConstants.TOP);
+        btnAnadirOso.setFont(new Font("Sylfaen", Font.ITALIC, 14));
         btnAnadirOso.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 zoologico.agregarAnimal("Oso");
                 JOptionPane.showMessageDialog(null, "Oso añadido correctamente.");
             }
         });
-        btnAnadirOso.setBounds(10, 70, 144, 23);
+        btnAnadirOso.setBounds(147, 103, 144, 23);
         contentPane.add(btnAnadirOso);
 
         JButton btnSalir = new JButton("Salir");
+        btnSalir.setVerticalAlignment(SwingConstants.TOP);
+        btnSalir.setForeground(new Color(255, 0, 0));
+        btnSalir.setFont(new Font("Sylfaen", Font.ITALIC, 14));
         btnSalir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null,
@@ -68,7 +79,7 @@ public class ObtenerDatos extends JFrame {
                 System.exit(0);
             }
         });
-        btnSalir.setBounds(10, 104, 144, 23);
+        btnSalir.setBounds(147, 142, 144, 23);
         contentPane.add(btnSalir);
     }
 }
