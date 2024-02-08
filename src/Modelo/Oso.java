@@ -3,7 +3,7 @@ package Modelo;
 
 import Modelo.Animal;
 
-public class Oso extends Animal implements Ursidos{
+public class Oso extends Animal implements Ursido{
     
     public Oso(String nombre, int id, String clasificacion){
         super(nombre, id, clasificacion);
