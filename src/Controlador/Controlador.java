@@ -16,7 +16,7 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import Vista.Menu;
 
-public class MainFrame extends JFrame {
+public class Controlador extends JFrame {
 
     private JPanel contentPane;
     private Zoologico zoo;

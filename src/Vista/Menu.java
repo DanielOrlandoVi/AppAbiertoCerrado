@@ -1,5 +1,6 @@
 package Vista;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,6 +29,7 @@ public class Menu extends JFrame {
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        setBounds(100, 100, 450, 300);
 	        contentPane = new JPanel();
+	        contentPane.setBackground(new Color(192, 192, 192));
 	        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	        setContentPane(contentPane);
 	        contentPane.setLayout(null);
@@ -39,7 +41,7 @@ public class Menu extends JFrame {
 
 	        JButton btnObtenerDatos = new JButton("Obtener Datos");
 	        btnObtenerDatos.setVerticalAlignment(SwingConstants.TOP);
-	        btnObtenerDatos.setBounds(151, 154, 135, 23);
+	        btnObtenerDatos.setBounds(151, 114, 135, 23);
 	        btnObtenerDatos.setFont(new Font("Sylfaen", Font.ITALIC, 14));
 	        contentPane.add(btnObtenerDatos);
 	        
@@ -60,5 +62,18 @@ public class Menu extends JFrame {
 	                JOptionPane.showMessageDialog(null, "Animales en el zoológico: " + zoo.getAnimales());
 	            }
 	        });
+	        JButton btnSalir = new JButton("Salir");
+	        btnSalir.setVerticalAlignment(SwingConstants.TOP);
+	        btnSalir.setForeground(new Color(255, 0, 0));
+	        btnSalir.setFont(new Font("Sylfaen", Font.ITALIC, 14));
+	        btnSalir.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                JOptionPane.showMessageDialog(null,
+	                        "Gracias por utilizar nuestro programa");
+	                System.exit(0);
+	            }
+	        });
+	        btnSalir.setBounds(151, 166, 144, 23);
+	        contentPane.add(btnSalir);
 	    }
 }
