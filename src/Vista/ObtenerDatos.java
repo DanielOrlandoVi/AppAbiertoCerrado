@@ -20,6 +20,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+import Modelo.Leon;
+import Modelo.Oso;
 
 public class ObtenerDatos extends JFrame {
 
@@ -56,7 +58,8 @@ public class ObtenerDatos extends JFrame {
         });
         btnAnadirLeon.setBounds(147, 65, 144, 23);
         contentPane.add(btnAnadirLeon);
-
+        Leon leon = new Leon("Alex", 2, "Felino");
+        Oso oso = new Oso("Joe", 3, "Ursido");
         JButton btnAnadirOso = new JButton("Añadir oso");
         btnAnadirOso.setVerticalAlignment(SwingConstants.TOP);
         btnAnadirOso.setFont(new Font("Sylfaen", Font.ITALIC, 14));
@@ -68,7 +71,7 @@ public class ObtenerDatos extends JFrame {
         });
         btnAnadirOso.setBounds(147, 103, 144, 23);
         contentPane.add(btnAnadirOso);
-
+        
         JButton btnSalir = new JButton("Salir");
         btnSalir.setVerticalAlignment(SwingConstants.TOP);
         btnSalir.setForeground(new Color(255, 0, 0));
@@ -76,7 +79,9 @@ public class ObtenerDatos extends JFrame {
         btnSalir.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null,
-                        "El número de animales en el zoológico es: " + zoologico.getAnimales().size());
+                        "El número de animales en el zoológico es: " + zoologico.getAnimales().size()
+                + "\n" + "La alimentación de los animales es: " + "\n" + leon.alimentarse()
+                + "\n" + oso.alimentarse());
                 System.exit(0);
             }
         });

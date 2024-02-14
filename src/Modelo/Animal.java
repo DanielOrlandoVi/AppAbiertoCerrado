@@ -13,7 +13,7 @@ public abstract class Animal {
         this.clasificacion = clasificacion;
     }
     //Todos los animales se alimentan, pero todos no de lo mismo
-    public abstract void alimentarse();
+    public abstract String alimentarse();
     
     
     public String getNombre(){

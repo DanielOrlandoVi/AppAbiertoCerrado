@@ -10,12 +10,12 @@ public class Oso extends Animal implements Ursido{
     }
     
     @Override
-    public void alimentarse(){
-        System.out.println("Un oso se alimenta de peces y bayas");
+    public String alimentarse(){
+        return "Un oso se alimenta de peces y bayas";
     }
     
     @Override
-    public void gruñir(){
-        System.out.println("Un oso gruñe");
+    public String gruñir(){
+        return "Un oso gruñe";
     }
 }

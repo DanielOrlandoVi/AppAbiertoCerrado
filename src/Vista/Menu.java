@@ -18,7 +18,7 @@ import Modelo.Zoologico;
 
 public class Menu extends JFrame {
 	 private JPanel contentPane;
-	  private Zoologico zoo;
+	 private Zoologico zoo;
 	 
 	public Menu() {
 	        zoo = new Zoologico();

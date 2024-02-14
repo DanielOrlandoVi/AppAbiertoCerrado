@@ -18,8 +18,7 @@ import Vista.Menu;
 
 public class Controlador extends JFrame {
 
-    private JPanel contentPane;
-    private Zoologico zoo;
+
 
     public static void main(String[] args) {
         Menu frame = new Menu();
